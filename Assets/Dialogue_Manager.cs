@@ -13,6 +13,11 @@ public class Dialogue_Manager : MonoBehaviour
     private Queue<string> names;
 
     public bool speaking = false;
+    public bool mid_sentence = false;
+
+    public float waitseconds = 0.025f;
+
+    public AudioSource typing;
 
     public void Start()
     {
@@ -22,6 +27,7 @@ public class Dialogue_Manager : MonoBehaviour
 
     public void Update()
     {
+
         if (!speaking)
         {
             animator.SetBool("IsOpen", false);
@@ -30,15 +36,20 @@ public class Dialogue_Manager : MonoBehaviour
         {
             if (Input.GetButtonDown("Dialogue"))
             {
-                DisplayNextSentence();
+                if (!mid_sentence)
+                {
+                    DisplayNextSentence();
+                }
+                else
+                {
+                    mid_sentence = false;
+                }
             }
         }
-
     }
 
     public void StartDialogue(Lisa_d Dialogue)
     {
-            Debug.Log("start");
             animator.SetBool("IsOpen", true);
 
             sentences.Clear();
@@ -77,17 +88,29 @@ public class Dialogue_Manager : MonoBehaviour
     IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
+        mid_sentence = true;
+        typing.Play();
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(waitseconds);
             yield return null;
+
+            if (!mid_sentence)
+            {
+                break;
+            }
         }
+        dialogueText.text = sentence;
+        mid_sentence = false;
+        typing.Pause();
+
     }
 
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
         speaking = false;
+        FindObjectOfType<player_movement>().cutscene = false;
     }
 }
