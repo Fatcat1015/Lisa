@@ -124,21 +124,29 @@ extern void eyeballcount_OnTriggerExit2D_m49D2204D1FDCF349ED43203EF407848A0FD122
 extern void eyeballcount_OnCollisionEnter2D_m7F82DA5F566BB60E894421519312BE6AE26A2F44 (void);
 // 0x00000038 System.Void eyeballcount::.ctor()
 extern void eyeballcount__ctor_m6A918E1A203DA8A29B61BF88CBFC2AC3828A382B (void);
-// 0x00000039 System.Void player_collision::Start()
+// 0x00000039 System.Void levelscreen::Update()
+extern void levelscreen_Update_m10F7651651CE83F57F4DDF80CFB2666FF0B8B860 (void);
+// 0x0000003A System.Void levelscreen::.ctor()
+extern void levelscreen__ctor_m4B8DE6B5003C2FF7391A8E27D307E06D6DE032A7 (void);
+// 0x0000003B System.Void player_collision::Start()
 extern void player_collision_Start_m3104CC2D44A38A9E28860C970391DCCE2A36E553 (void);
-// 0x0000003A System.Void player_collision::OnTriggerStay2D(UnityEngine.Collider2D)
+// 0x0000003C System.Void player_collision::OnTriggerStay2D(UnityEngine.Collider2D)
 extern void player_collision_OnTriggerStay2D_m583E9BDD63C4968AF858FA920500686734AAA5CD (void);
-// 0x0000003B System.Void player_collision::.ctor()
+// 0x0000003D System.Void player_collision::.ctor()
 extern void player_collision__ctor_mDB3158ACF57345348E9A1140F8CC011D1122590B (void);
-// 0x0000003C System.Void player_movement::Start()
+// 0x0000003E System.Void player_movement::Start()
 extern void player_movement_Start_m9D6C8B9D45C03703DE3437415EA03A260875A66E (void);
-// 0x0000003D System.Void player_movement::Update()
+// 0x0000003F System.Void player_movement::Update()
 extern void player_movement_Update_mBD42103B193F031CEBE4464D588CB8A3A68F415A (void);
-// 0x0000003E System.Void player_movement::FixedUpdate()
+// 0x00000040 System.Void player_movement::FixedUpdate()
 extern void player_movement_FixedUpdate_m87EC18960457809FD6AAA12DE105C3914C74F922 (void);
-// 0x0000003F System.Void player_movement::.ctor()
+// 0x00000041 System.Void player_movement::.ctor()
 extern void player_movement__ctor_mE49C4800A1E016655298DDA0F96D9DD9FE50E4F8 (void);
-static Il2CppMethodPointer s_methodPointers[63] = 
+// 0x00000042 System.Void sceneselect::Update()
+extern void sceneselect_Update_m6E0C997B7E14C0E260B2E72A06794457B7F9B84C (void);
+// 0x00000043 System.Void sceneselect::.ctor()
+extern void sceneselect__ctor_m83B8D59B1B30DFB83176BF6E76CB84C8607679E7 (void);
+static Il2CppMethodPointer s_methodPointers[67] = 
 {
 	Dialogue_Manager_Start_m431833935CC31A91EED2382136762770C12E1FC6,
 	Dialogue_Manager_Update_m096A56C5BB5FE7459F574C15AF6492F6DDC21660,
@@ -196,6 +204,8 @@ static Il2CppMethodPointer s_methodPointers[63] =
 	eyeballcount_OnTriggerExit2D_m49D2204D1FDCF349ED43203EF407848A0FD122F0,
 	eyeballcount_OnCollisionEnter2D_m7F82DA5F566BB60E894421519312BE6AE26A2F44,
 	eyeballcount__ctor_m6A918E1A203DA8A29B61BF88CBFC2AC3828A382B,
+	levelscreen_Update_m10F7651651CE83F57F4DDF80CFB2666FF0B8B860,
+	levelscreen__ctor_m4B8DE6B5003C2FF7391A8E27D307E06D6DE032A7,
 	player_collision_Start_m3104CC2D44A38A9E28860C970391DCCE2A36E553,
 	player_collision_OnTriggerStay2D_m583E9BDD63C4968AF858FA920500686734AAA5CD,
 	player_collision__ctor_mDB3158ACF57345348E9A1140F8CC011D1122590B,
@@ -203,79 +213,85 @@ static Il2CppMethodPointer s_methodPointers[63] =
 	player_movement_Update_mBD42103B193F031CEBE4464D588CB8A3A68F415A,
 	player_movement_FixedUpdate_m87EC18960457809FD6AAA12DE105C3914C74F922,
 	player_movement__ctor_mE49C4800A1E016655298DDA0F96D9DD9FE50E4F8,
+	sceneselect_Update_m6E0C997B7E14C0E260B2E72A06794457B7F9B84C,
+	sceneselect__ctor_m83B8D59B1B30DFB83176BF6E76CB84C8607679E7,
 };
-static const int32_t s_InvokerIndices[63] = 
+static const int32_t s_InvokerIndices[67] = 
 {
-	1498,
-	1498,
-	1253,
-	1498,
-	974,
-	1498,
-	1498,
-	1243,
-	1498,
-	1476,
-	1456,
-	1498,
-	1456,
-	1498,
-	1476,
-	1476,
-	1253,
-	1253,
-	759,
-	1498,
-	1498,
-	1498,
-	1498,
-	1270,
-	756,
-	1270,
-	383,
-	1253,
-	2222,
-	1498,
-	1476,
-	1476,
-	1253,
-	1253,
-	1253,
-	1498,
-	1498,
-	1498,
-	1498,
-	1456,
-	756,
-	1270,
-	383,
-	1253,
-	1243,
-	1498,
-	1476,
-	1456,
-	1498,
-	1456,
-	1498,
-	1498,
-	1253,
-	1253,
-	1253,
-	1498,
-	1498,
-	1253,
-	1498,
-	1498,
-	1498,
-	1498,
-	1498,
+	1499,
+	1499,
+	1254,
+	1499,
+	975,
+	1499,
+	1499,
+	1244,
+	1499,
+	1477,
+	1457,
+	1499,
+	1457,
+	1499,
+	1477,
+	1477,
+	1254,
+	1254,
+	760,
+	1499,
+	1499,
+	1499,
+	1499,
+	1271,
+	757,
+	1271,
+	384,
+	1254,
+	2226,
+	1499,
+	1477,
+	1477,
+	1254,
+	1254,
+	1254,
+	1499,
+	1499,
+	1499,
+	1499,
+	1457,
+	757,
+	1271,
+	384,
+	1254,
+	1244,
+	1499,
+	1477,
+	1457,
+	1499,
+	1457,
+	1499,
+	1499,
+	1254,
+	1254,
+	1254,
+	1499,
+	1499,
+	1499,
+	1499,
+	1254,
+	1499,
+	1499,
+	1499,
+	1499,
+	1499,
+	1499,
+	1499,
 };
 extern const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	63,
+	67,
 	s_methodPointers,
 	0,
 	NULL,

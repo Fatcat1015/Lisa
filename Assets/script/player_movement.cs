@@ -20,11 +20,13 @@ public class player_movement : MonoBehaviour
 
     void Update()
     {
-        if (!Dialoguem.speaking)
+        if (Dialoguem == null || !Dialoguem.speaking)
         {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
+                movement.x = Input.GetAxisRaw("Horizontal");
+                movement.y = Input.GetAxisRaw("Vertical");
         }
+
+
         //character moving animation
         /*if (movement.x != 0 || movement.y != 0)//if moving, play animation
         {

@@ -11,9 +11,10 @@ public class eyeballcount : MonoBehaviour
     private GameObject col;
     public int apple = 0;
     public GameObject ending;
+    public int num_finish;
     void Update()
     {
-        Ecount.text = "Eyeballs talked to:" + eyeballc.ToString();
+        if(Ecount != null)Ecount.text = "Eyeballs talked to:" + eyeballc.ToString();
 
         if (cantalk)
         {
@@ -27,7 +28,7 @@ public class eyeballcount : MonoBehaviour
             }
         }
 
-        if (apple == 3)
+        if (apple == num_finish)
         {
             transform.position = ending.transform.position;
         }
